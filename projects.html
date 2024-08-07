@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chrisbuckleyplumbing</title>
+     <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.svg"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- header section  -->
+    <section class="fixed z-[101] w-full fixed-header">
+        <div class="py-[15px] px-[15px] md:px-[40px] grad"
+            style="transition: height .2s ease,background-color .2s ease,padding .2s ease,width .2s ease,margin .2s ease,top .2s ease,transform .2s ease;">
+            <div class="md:flex hidden items-center lg:items-start justify-between lg:justify-start">
+                <div>
+                    <div class="logo sm:w-[265px] lg:w-[350px] w-full">
+                        <img src="./assets/images/Logo+White-420w.webp" class="w-full h-auto" alt="Logo">
+                    </div>
+                </div>
+                <div class="menu-items hidden lg:block px-[15px]">
+                    <nav class="w-[953px] h-auto flex justify-end mt-[17px]"
+                        style="transition: height .2s ease, background-color .2s ease, padding .2s ease, width .2s ease, margin .2s ease, top .2s ease, transform .2s ease;">
+                        <ul class="flex list-none m-0 p-0 flex-wrap items-center text-white">
+                            <li class="flex relative">
+                                <a href="index.html" class="text-[18px] text-white font-normal px-[16px] ">
+                                    <span class="relative">Home</span>
+                                </a>
+                            </li>
+                            <li class="flex relative">
+                                <a href="./out-team.html" class="text-[18px] text-white font-normal px-[16px] ">
+                                    <span class="relative">About</span>
+                                </a>
+                            </li>
+                            <li class="flex relative">
+                                <a href="services.html" class="text-[18px] text-white font-normal px-[16px] ">
+                                    <span class="relative">Services</span>
+                                </a>
+                            </li>
+                            <li class="flex relative">
+                                <a href="projects.html" class="text-[18px] text-white font-normal px-[16px] active">
+                                    <span class="relative">Project</span>
+                                </a>
+                            </li>
+                            <li class="flex relative">
+                                <a href="contact-us.html" class="text-[18px] text-white font-normal px-[16px] ">
+                                    <span class="relative">Contact</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="hidden md:block">
+                    <div class="relative lg:mt-[17px] text-right"
+                        style="transition: height .2s ease,background-color .2s ease,padding .2s ease,width .2s ease,margin .2s ease,top .2s ease,transform .2s ease;">
+                        <div class="flex items-center gap-4">
+                            <a href="#" class="">
+                                <span class="w-[36px] h-[36px] block">
+                                    <img src="./assets/images/facebook.png" class="w-[36px] h-auto" alt="">
+                                </span>
+                            </a>
+                            <a href="#" class="">
+                                <span class="w-[36px] h-[36px] block">
+                                    <img src="./assets/images/instagram.png" class="w-[36px] h-auto" alt="">
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden sm:block lg:hidden text-white">
+                    <span>(07) 4638 0790</span>
+                </div>
+                <div class="hidden sm:block lg:hidden text-white">
+                    <button class="showOnMedium layout-drawer-hamburger hamburger-on-header"
+                        id="layout-drawer-hamburger" aria-label="menu">
+                        <span class="hamburger__slice"></span>
+                        <span class="hamburger__slice"></span>
+                        <span class="hamburger__slice"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="flex justify-between md:hidden items-center">
+                <button class="layout-drawer-hamburger hamburger-on-header" id="hamburger" aria-label="menu">
+                    <span class="hamburger__slice"></span>
+                    <span class="hamburger__slice"></span>
+                    <span class="hamburger__slice"></span>
+                </button>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="./assets/images/Logo+White-420w.webp" class="max-w-[184px] h-auto w-full" alt="">
+                    </a>
+                </div>
+                <a href="#" class="text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#fff" viewBox="0 0 70 70"
+                        id="1184735975" class="svg u_1184735975 text-white" data-icon-name="wp-phone">
+                        <g id="1280868223">
+                            <path
+                                d="M25.3,44.8C35.7,55.3,44.2,56,46.6,56c3.9,0,9.4-5,9.4-6.3v-2.5c0-0.6-0.4-1.1-1-1.3l-10-3.2c-0.5-0.2-1,0-1.4,0.3L40,46.8
+                                c-0.4,0.4-1.1,0.5-1.6,0.2c-1.5-0.9-4.8-2.9-8.6-6.8c-3.8-3.8-5.9-7.1-6.8-8.6c-0.3-0.5-0.2-1.2,0.2-1.6l3.7-3.7
+                                c0.4-0.4,0.5-0.9,0.3-1.4l-3.2-10c-0.2-0.6-0.7-1-1.3-1h-2.5C19,14.1,14,19.7,14,23.5C14,25.8,14.8,34.3,25.3,44.8L25.3,44.8z"
+                                id="1141627840"></path>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+
+            <div id="mobile-menu"
+                class="fixed inset-x-0 top-0 bg-[rgba(21,35,83,1)] text-white h-screen transform -translate-y-full transition-transform duration-300 ease-out">
+                <nav class="w-full h-full flex justify-center mt-[17px]">
+                    <ul class="flex list-none m-0 p-0 flex-col gap-5 justify-center items-center text-white">
+                        <li class="flex relative">
+                            <a href="index.html" class="text-[18px] text-white font-normal px-[16px] ">
+                                <span class="relative">Home</span>
+                            </a>
+                        </li>
+                        <li class="flex relative">
+                            <a href="./out-team.html" class="text-[18px] text-white font-normal px-[16px] ">
+                                <span class="relative">About</span>
+                            </a>
+                        </li>
+                        <li class="flex relative">
+                            <a href="services.html" class="text-[18px] text-white font-normal px-[16px]">
+                                <span class="relative">Services</span>
+                            </a>
+                        </li>
+                        <li class="flex relative">
+                            <a href="projects.html" class="text-[18px] text-white font-normal px-[16px] active">
+                                <span class="relative">Project</span>
+                            </a>
+                        </li>
+                        <li class="flex relative">
+                            <a href="contact-us.html" class="text-[18px] text-white font-normal px-[16px] ">
+                                <span class="relative">Contact</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- drawer  -->
+    <div id="drawer-overlay" class="drawer-overlay hidden fixed inset-0 bg-black opacity-50 z-10"></div>
+
+    <div id="drawer"
+        class="drawer hidden fixed top-0 right-0 w-1/2 z-[999] h-full bg-[rgba(21,35,83,1)] z-20 transition-transform transform translate-x-full">
+        <button id="close-drawer" class="text-white absolute top-4 right-4">X</button>
+        <nav class="w-full h-full flex justify-center mt-[17px]">
+            <ul class="flex list-none m-0 p-0 flex-col gap-5 justify-center  items-center text-white">
+                <li class="flex relative">
+                    <a href="index.html" class="text-[18px] text-white font-normal px-[16px] ">
+                        <span class="relative">Home</span>
+                    </a>
+                </li>
+                <li class="flex relative">
+                    <a href="./out-team.html" class="text-[18px] text-white font-normal px-[16px] ">
+                        <span class="relative">About</span>
+                    </a>
+                </li>
+                <li class="flex relative">
+                    <a href="services.html" class="text-[18px] text-white font-normal px-[16px] ">
+                        <span class="relative">Services</span>
+                    </a>
+                </li>
+                <li class="flex relative">
+                    <a href="projects.html" class="text-[18px] text-white font-normal px-[16px] active">
+                        <span class="relative">Project</span>
+                    </a>
+                </li>
+                <li class="flex relative">
+                    <a href="contact-us.html" class="text-[18px] text-white font-normal px-[16px] ">
+                        <span class="relative">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <!-- end header section  -->
+
+    <!-- main content  -->
+
+
+    <section class="px-[15px] container  mx-[auto] pt-[150px] md:pt-[240px] pb-[40px]">
+        <div class="xl:max-w-[1200px] mx-auto md:max-w-[960px] ">
+            <div class="grid grid-cols-12 gap-[30px]">
+                <div class="cols-span-12 md:col-span-3">
+                    <div class="max-w-[240px] h-[32px] w-full mx-auto md:mx-0">
+                        <div class="relative w-full h-full">
+                            <input type="text"
+                                class="w-full h-full text-[14px] pl-[15px] pr-[37px] bg-transparent text-white placeholder:text-white border border-white outline-none"
+                                placeholder="Search Projects">
+                            <div class="text-white absolute top-[5px] right-[10px]">
+                                <i class="fas fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cols-span-12 md:col-span-9">
+                    <div class="flex flex-col gap-[30px]">
+                        <div class="w-full group relative overflow-hidden">
+                            <a href="trc-principal-depot.html">
+                                <div class="w-full h-[420px] overflow-hidden">
+                                    <img src="./assets/images/TRC.Depot_068-1920w.webp"
+                                        class="w-full h-full transform transition-transform object-cover duration-300 group-hover:scale-110"
+                                        alt="">
+                                </div>
+                            </a>
+                            <div class="py-[15px]">
+                                <h1>
+                                    <a href="trc-principal-depot.html"
+                                        class="font-bold text-[23px] text-white transition-all hover:text-[#50b5b5]">
+                                        TRC PRINCIPAL DEPOT
+                                    </a>
+                                </h1>
+                            </div>
+                            <a href="trc-principal-depot.html"
+                                class="text-[16px] text-white opacity-[.8] hover:text-[#50b5b5]">
+                                Read More →
+                            </a>
+                        </div>
+
+                        <div class="w-full group relative overflow-hidden">
+                            <a href="#">
+                                <div class="w-full h-[420px] overflow-hidden">
+                                    <img src="./assets/images/Dalby-Water-1920w.webp"
+                                        class="w-full h-full transform transition-transform object-cover duration-300 group-hover:scale-110"
+                                        alt="">
+                                </div>
+                            </a>
+                            <div class="py-[15px]">
+                                <h1>
+                                    <a href="#"
+                                        class="font-bold  text-[23px] text-white transition-all hover:text-[#50b5b5]">
+                                        RELOCATION OF WATER AND GAS RETICULATION, WARREGO HIGHWAY
+                                    </a>
+                                </h1>
+                            </div>
+                            <a href="" class="text-[16px] text-white opacity-[.8] hover:text-[#50b5b5]">
+                                Read More →
+                            </a>
+                        </div>
+                        <div class="w-full group relative overflow-hidden">
+                            <a href="#">
+                                <div class="w-full h-[420px] overflow-hidden">
+                                    <img src="./assets/images/grammarschool_001_1_Photo-1920w.webp"
+                                        class="w-full h-full transform transition-transform object-cover duration-300 group-hover:scale-110"
+                                        alt="">
+                                </div>
+                            </a>
+                            <div class="py-[15px]">
+                                <h1>
+                                    <a href="#"
+                                        class="font-bold  text-[23px] text-white transition-all hover:text-[#50b5b5]">
+                                        TOOWOOMBA GRAMMAR SCHOOL GYMNASIUM
+                                    </a>
+                                </h1>
+                            </div>
+                            <a href="" class="text-[16px] text-white opacity-[.8] hover:text-[#50b5b5]">
+                                Read More →
+                            </a>
+                        </div>
+                        <div class="w-full group relative overflow-hidden">
+                            <a href="#">
+                                <div class="w-full h-[420px] overflow-hidden">
+                                    <img src="./assets/images/Arbour_025_Medium-min-1920w.webp"
+                                        class="w-full h-full transform transition-transform object-cover duration-300 group-hover:scale-110"
+                                        alt="">
+                                </div>
+                            </a>
+                            <div class="py-[15px]">
+                                <h1>
+                                    <a href="#"
+                                        class="font-bold  text-[23px] text-white transition-all hover:text-[#50b5b5]">
+                                        ARBOUR APARTMENTS
+                                    </a>
+                                </h1>
+                            </div>
+                            <a href="" class="text-[16px] text-white opacity-[.8] hover:text-[#50b5b5]">
+                                Read More →
+                            </a>
+                        </div>
+                        <div class="w-full group relative overflow-hidden">
+                            <a href="#">
+                                <div class="w-full h-[420px] overflow-hidden">
+                                    <img src="./assets/images/TheGlad_034_Medium-min-1920w.webp"
+                                        class="w-full h-full transform transition-transform object-cover duration-300 group-hover:scale-110"
+                                        alt="">
+                                </div>
+                            </a>
+                            <div class="py-[15px]">
+                                <h1>
+                                    <a href="#"
+                                        class="font-bold  text-[23px] text-white transition-all hover:text-[#50b5b5]">
+                                        THE GLAD HOTEL
+                                    </a>
+                                </h1>
+                            </div>
+                            <a href="" class="text-[16px] text-white opacity-[.8] hover:text-[#50b5b5]">
+                                Read More →
+                            </a>
+                        </div>
+                        <div class="w-full group relative overflow-hidden">
+                            <a href="#">
+                                <div class="w-full h-[420px] overflow-hidden">
+                                    <img src="./assets/images/Glennie-Sports-Stadium---Northbuild-8542-1920w.webp"
+                                        class="w-full h-full transform transition-transform object-cover duration-300 group-hover:scale-110"
+                                        alt="">
+                                </div>
+                            </a>
+                            <div class="py-[15px]">
+                                <h1>
+                                    <a href="#"
+                                        class="font-bold  text-[23px] text-white transition-all hover:text-[#50b5b5]">
+                                        THE GLENNIE SCHOOL
+                                    </a>
+                                </h1>
+                            </div>
+                            <a href="" class="text-[16px] text-white opacity-[.8] hover:text-[#50b5b5]">
+                                Read More →
+                            </a>
+                        </div>
+                        <div class="w-full group relative overflow-hidden">
+                            <a href="#">
+                                <div class="w-full h-[420px] overflow-hidden">
+                                    <img src="./assets/images/agnes2_Photo-1920w.webp"
+                                        class="w-full h-full transform transition-transform object-cover duration-300 group-hover:scale-110"
+                                        alt="">
+                                </div>
+                            </a>
+                            <div class="py-[15px]">
+                                <h1>
+                                    <a href="#"
+                                        class="font-bold  text-[23px] text-white transition-all hover:text-[#50b5b5]">
+                                        AGNES WATER TRUNK MAIN
+                                    </a>
+                                </h1>
+                            </div>
+                            <a href="" class="text-[16px] text-white opacity-[.8] hover:text-[#50b5b5]">
+                                Read More →
+                            </a>
+                        </div>
+                        <div class="w-full group relative overflow-hidden">
+                            <a href="#">
+                                <div class="w-full h-[420px] overflow-hidden">
+                                    <img src="./assets/images/knights6_Photo-1920w.webp"
+                                        class="w-full h-full transform transition-transform object-cover duration-300 group-hover:scale-110"
+                                        alt="">
+                                </div>
+                            </a>
+                            <div class="py-[15px]">
+                                <h1>
+                                    <a href="#"
+                                        class="font-bold  text-[23px] text-white transition-all hover:text-[#50b5b5]">
+                                        KNIGHTS LAUNDRY RELOCATION
+                                    </a>
+                                </h1>
+                            </div>
+                            <a href="" class="text-[16px] text-white opacity-[.8] hover:text-[#50b5b5]">
+                                Read More →
+                            </a>
+                        </div>
+                        <div class="w-full group relative overflow-hidden">
+                            <a href="#">
+                                <div class="w-full h-[420px] overflow-hidden">
+                                    <img src="./assets/images/salesyard_Photo-1920w.webp"
+                                        class="w-full h-full transform transition-transform object-cover duration-300 group-hover:scale-110"
+                                        alt="">
+                                </div>
+                            </a>
+                            <div class="py-[15px]">
+                                <h1>
+                                    <a href="#"
+                                        class="font-bold  text-[23px] text-white transition-all hover:text-[#50b5b5]">
+                                        DALBY SALEYARDS REDEVELOPMENT
+                                    </a>
+                                </h1>
+                            </div>
+                            <a href="" class="text-[16px] text-white opacity-[.8] hover:text-[#50b5b5]">
+                                Read More →
+                            </a>
+                        </div>
+                        <div class="w-full group relative overflow-hidden">
+                            <a href="#">
+                                <div class="w-full h-[420px] overflow-hidden">
+                                    <img src="./assets/images/jeep1_Photo-1920w.webp"
+                                        class="w-full h-full transform transition-transform object-cover duration-300 group-hover:scale-110"
+                                        alt="">
+                                </div>
+                            </a>
+                            <div class="py-[15px]">
+                                <h1>
+                                    <a href="#"
+                                        class="font-bold  text-[23px] text-white transition-all hover:text-[#50b5b5]">
+                                        'THE JEEP' OFFICE COMPLEX
+                                    </a>
+                                </h1>
+                            </div>
+                            <a href="" class="text-[16px] text-white opacity-[.8] hover:text-[#50b5b5]">
+                                Read More →
+                            </a>
+                        </div>
+                        <div class="mt-[10px] flex justify-center">
+                            <button
+                                class="w-[222px] h-[53px] bg-white border-[1px] border-white hover:bg-transparent transition-all text-[#152353] text-[16px] font-bold hover:text-white">
+                                Show More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg-white">
+        <div class="px-[15px] container mx-auto ">
+            <div class="flex  md:flex-row  justify-center xl:max-w-[1200px] mx-auto md:max-w-[960px] w-full ">
+                <div class="md:px-[20px] py-[20px] md:w-[33.33333%]">
+                    <div class=" md:w-[120px] md:h-[120px] w-full h-full mx-auto">
+                        <a href="#">
+                            <img src="./assets/images/Q-Mark+(ISO+45001)-144w.webp"
+                                class="w-full h-full hover:opacity-[.7] transition-all" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="md:px-[20px] py-[20px] md:w-[33.33333%]">
+                    <div class=" md:w-[120px] md:h-[120px] w-full h-full mx-auto">
+                        <a href="#">
+                            <img src="./assets/images/Q-Mark+(ISO+45001)-144w.webp"
+                                class="w-full h-full hover:opacity-[.7] transition-all" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="md:px-[20px] py-[20px] md:w-[33.33333%]">
+                    <div class=" md:w-[120px] md:h-[120px] w-full h-full mx-auto">
+                        <a href="#">
+                            <img src="./assets/images/Q-Mark+(ISO+45001)-144w.webp"
+                                class="w-full h-full hover:opacity-[.7] transition-all" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- footer  -->
+
+    <section class="bg-[#00000080] ">
+        <div class="py-[15px] container mx-auto px-[15px]">
+
+            <div class="flex  md:flex-row flex-col xl:max-w-[1200px] items-center mx-auto md:max-w-[960px] w-full ">
+                <div class="md:px-[20px] py-[20px] flex justify-center gap-4 md:w-[33.33333%]">
+                    <a href="#" class="">
+                        <span class="w-[36px] h-[36px] block">
+                            <img src="./assets/images/facebook.png" class="w-[36px] h-auto" alt="">
+                        </span>
+                    </a>
+                    <a href="#" class="">
+                        <span class="w-[36px] h-[36px] block">
+                            <img src="./assets/images/instagram.png" class="w-[36px] h-auto" alt="">
+                        </span>
+                    </a>
+                </div>
+                <div class="md:px-[20px] py-[20px] md:w-[33.33333%]">
+                    <nav class="    flex justify-center mt-[17px]"
+                        style="transition: height .2s ease, background-color .2s ease, padding .2s ease, width .2s ease, margin .2s ease, top .2s ease, transform .2s ease;">
+                        <ul class="flex list-none m-0 p-0 flex-wrap items-center text-white">
+                            <li class="flex relative">
+                                <a href="#" class="text-[12px] text-white font-normal px-[16px] ">
+                                    <span class="relative">Privacy Policy</span>
+                                </a>
+                            </li>
+                            <li class="flex relative">
+                                <a href="#" class="text-[12px] text-white font-normal px-[16px]">
+                                    <span class="relative">Developed by Indigo Web</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+                <div class="md:px-[20px] py-[20px] md:w-[33.33333%]">
+                    <p class="text-white">
+                        © 2024
+                        Chris Buckley Plumbing
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+            hamburger.classList.toggle('active');
+        });
+
+    </script>
+
+    <script>
+        document.getElementById('layout-drawer-hamburger').addEventListener('click', function () {
+            document.getElementById('drawer').classList.remove('hidden');
+            document.getElementById('drawer').classList.remove('translate-x-full');
+            document.getElementById('drawer-overlay').classList.remove('hidden');
+        });
+
+        document.getElementById('close-drawer').addEventListener('click', function () {
+            document.getElementById('drawer').classList.add('translate-x-full');
+            setTimeout(function () {
+                document.getElementById('drawer').classList.add('hidden');
+            }, 300);
+            document.getElementById('drawer-overlay').classList.add('hidden');
+        });
+
+        document.getElementById('drawer-overlay').addEventListener('click', function () {
+            document.getElementById('drawer').classList.add('translate-x-full');
+            setTimeout(function () {
+                document.getElementById('drawer').classList.add('hidden');
+            }, 300);
+            document.getElementById('drawer-overlay').classList.add('hidden');
+        });
+
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const header = document.querySelector('section.fixed');
+            const contentContainer = header.querySelector('.flex');
+            const logo = header.querySelector('.logo');
+
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 0) {
+                    contentContainer.classList.add('items-center-on-scroll');
+                    logo.classList.add('logo-small');
+                } else {
+                    contentContainer.classList.remove('items-center-on-scroll');
+                    logo.classList.remove('logo-small');
+                }
+            });
+        });
+
+    </script>
+
+
+</body>
+
+</html>
