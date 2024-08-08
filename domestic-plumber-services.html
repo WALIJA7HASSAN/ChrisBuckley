@@ -22,6 +22,7 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./assets/styles/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   </head>
   <body>
     <!-- header section  -->
@@ -250,7 +251,7 @@
         </p>
 
        
-        <div class="py-6 px-4 md:p-6 md:pr-4 grid grid-cols-2 gap-2 md:gap-4 md:grid-cols-4">
+        <div id="DomesticImg" class="py-6 px-4 md:p-6 md:pr-4 grid grid-cols-2 gap-2 md:gap-4 md:grid-cols-4">
             <div class="group cursor-pointer hover:bg-gradient-to-b from-transparent to-black transition-all duration-200">
                         <img src="./assets/images/domesticImg1.jpg" class="object-cover group-hover:opacity-75 aspect-square md:aspect-[9/15]">
                     </div>
@@ -299,6 +300,25 @@
         </div>
       </div>
     </section>
+
+     <div id="fullscreen" class="fullscreen">
+    <button id="prev" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-[20px]">
+        <i class="fas fa-arrow-left"></i>
+    </button>
+    <img id="fullscreen-img" src="" alt="">
+    <button id="next" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-[20px]">
+        <i class="fas fa-arrow-right"></i>
+    </button>
+    <button id="close" class="absolute top-4 right-4 text-white text-[20px]">
+        <i class="fas fa-times"></i>
+    </button>
+    <button id="fullscreen-btn" class="absolute top-4 left-4 text-white text-[20px]">
+        <i class="fas fa-expand"></i>
+    </button>
+    <div id="image-number" class="absolute bottom-4 left-4 text-white text-lg">
+        1/4 
+    </div>
+</div>
 
     <!-- footer -->
     <section class="bg-white">
@@ -462,6 +482,79 @@
           }
         })
       })
+    </script>
+    <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('#DomesticImg img');
+    const fullscreen = document.getElementById('fullscreen');
+    const fullscreenImg = document.getElementById('fullscreen-img');
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+    const closeButton = document.getElementById('close');
+    const fullscreenButton = document.getElementById('fullscreen-btn');
+    const imageNumber = document.getElementById('image-number');
+    let currentIndex = 0;
+
+    function updateImageNumber() {
+        imageNumber.textContent = `${currentIndex + 1}/${images.length}`;
+    }
+
+    function showFullscreen(index) {
+        fullscreenImg.src = images[index].src;
+        fullscreen.classList.add('show');
+        currentIndex = index;
+        updateImageNumber();
+    }
+
+    function showPrevImage() {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+        fullscreenImg.src = images[currentIndex].src;
+        updateImageNumber();
+    }
+
+    function showNextImage() {
+        currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+        fullscreenImg.src = images[currentIndex].src;
+        updateImageNumber();
+    }
+
+    images.forEach((img, index) => {
+        img.addEventListener('click', () => showFullscreen(index));
+    });
+
+    prevButton.addEventListener('click', showPrevImage);
+    nextButton.addEventListener('click', showNextImage);
+    closeButton.addEventListener('click', () => fullscreen.classList.remove('show'));
+
+    fullscreenButton.addEventListener('click', () => {
+        if (!document.fullscreenElement) {
+            fullscreen.requestFullscreen().catch(err => {
+                alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+            });
+        } else {
+            document.exitFullscreen();
+        }
+    });
+
+    fullscreen.addEventListener('click', (e) => {
+        if (e.target === fullscreen || e.target === fullscreenImg) {
+            fullscreen.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (fullscreen.classList.contains('show')) {
+            if (e.key === 'ArrowLeft') {
+                showPrevImage();
+            } else if (e.key === 'ArrowRight') {
+                showNextImage();
+            } else if (e.key === 'Escape') {
+                fullscreen.classList.remove('show');
+            }
+        }
+    });
+});
+
     </script>
   </body>
 </html>

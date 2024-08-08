@@ -13,6 +13,7 @@
   href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./assets/styles/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
      <!-- header section  -->
@@ -239,6 +240,25 @@
         </div>
     </section>
 
+      <div id="fullscreen" class="fullscreen">
+    <button id="prev" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-[20px]">
+        <i class="fas fa-arrow-left"></i>
+    </button>
+    <img id="fullscreen-img" src="" alt="">
+    <button id="next" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-[20px]">
+        <i class="fas fa-arrow-right"></i>
+    </button>
+    <button id="close" class="absolute top-4 right-4 text-white text-[20px]">
+        <i class="fas fa-times"></i>
+    </button>
+    <button id="fullscreen-btn" class="absolute top-4 left-4 text-white text-[20px]">
+        <i class="fas fa-expand"></i>
+    </button>
+    <div id="image-number" class="absolute bottom-4 left-4 text-white text-lg">
+        1/13 
+    </div>
+</div>
+
     <!-- footer -->
      <section class="bg-white">
         <div class="px-[15px] container mx-auto ">
@@ -459,5 +479,109 @@
 })
 
     </script>
+   <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const fullscreen = document.getElementById('fullscreen');
+    const fullscreenImg = document.getElementById('fullscreen-img');
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+    const closeButton = document.getElementById('close');
+    const fullscreenButton = document.getElementById('fullscreen-btn');
+    const imageNumber = document.getElementById('image-number');
+    let currentIndex = 0;
+
+    // List of all 13 images
+    const allImages = [
+        './assets/images/WaterImg1.jpg',
+        './assets/images/WaterImg3.png',
+        './assets/images/WaterImg4.jpg',
+        './assets/images/WaterImg5.png',
+        './assets/images/WaterImg6.jpg',
+        './assets/images/WaterImg2.jpg',
+        './assets/images/WaterImg7.jpg',
+        './assets/images/WaterImg8.jpg',
+        './assets/images/WaterImg9.jpg',
+        './assets/images/WaterImg10.jpg',
+        './assets/images/WaterImg11.jpg',
+        './assets/images/WaterImg12.jpg',
+        './assets/images/WaterImg13.jpg'
+    ];
+
+    function updateImageNumber() {
+        imageNumber.textContent = `${currentIndex + 1}/${allImages.length}`;
+    }
+
+    function showFullscreen(index) {
+        fullscreenImg.src = allImages[index];
+        fullscreen.classList.add('show');
+        currentIndex = index;
+        updateImageNumber();
+    }
+
+    function showPrevImage() {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : allImages.length - 1;
+        showFullscreen(currentIndex);
+    }
+
+    function showNextImage() {
+        currentIndex = (currentIndex < allImages.length - 1) ? currentIndex + 1 : 0;
+        showFullscreen(currentIndex);
+    }
+
+    // Event delegation: handle clicks on images in the container
+    document.getElementById('imageContainer').addEventListener('click', (e) => {
+        if (e.target && e.target.tagName === 'IMG') {
+            const index = allImages.indexOf(e.target.src);
+            if (index !== -1) {
+                showFullscreen(index);
+            } else {
+                // Map the clicked image's src to the corresponding src in allImages array
+                const imgSrc = e.target.src.split('/').pop(); // get the filename part of the src
+                const fullSrc = allImages.find(src => src.includes(imgSrc));
+                const newIndex = allImages.indexOf(fullSrc);
+                if (newIndex !== -1) {
+                    showFullscreen(newIndex);
+                }
+            }
+        }
+    });
+
+    prevButton.addEventListener('click', showPrevImage);
+    nextButton.addEventListener('click', showNextImage);
+    closeButton.addEventListener('click', () => fullscreen.classList.remove('show'));
+
+    fullscreenButton.addEventListener('click', () => {
+        if (!document.fullscreenElement) {
+            fullscreen.requestFullscreen().catch(err => {
+                alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+            });
+        } else {
+            document.exitFullscreen();
+        }
+    });
+
+    fullscreen.addEventListener('click', (e) => {
+        if (e.target === fullscreen || e.target === fullscreenImg) {
+            fullscreen.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (fullscreen.classList.contains('show')) {
+            if (e.key === 'ArrowLeft') {
+                showPrevImage();
+            } else if (e.key === 'ArrowRight') {
+                showNextImage();
+            } else if (e.key === 'Escape') {
+                fullscreen.classList.remove('show');
+            }
+        }
+    });
+});
+</script>
+
+
+
+
 </body>
 </html>
